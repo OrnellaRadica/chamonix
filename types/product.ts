@@ -1,3 +1,13 @@
+export interface ReducedProduct {
+  id: number;
+  title: string;
+  body_html?: any;
+  variants: Variant[];
+  options: Option[];
+  images: Image[];
+}
+
+
 export interface Product {
   id: number;
   title: string;
@@ -41,7 +51,7 @@ interface Option {
   values: string[];
 }
 
-interface Variant {
+export interface Variant {
   id: number;
   product_id: number;
   title: string;
