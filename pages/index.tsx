@@ -1,13 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="bg-white">
-      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-        <img
-          src={"images/snowboard.jpeg"}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden h-full w-full">
+        <Image
+          src={"/images/snowboard.jpeg"}
           alt="Hero section"
-          className="h-full w-full object-cover object-center"
+          fill
+          className="object-cover object-center"
+          quality={100}
+          priority
         />
       </div>
       <div className="relative mx-auto flex bg-black/20 flex-col items-center justify-center min-h-screen px-6 py-32 text-center sm:py-64 lg:px-0">

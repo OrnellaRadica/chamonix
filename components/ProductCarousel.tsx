@@ -32,7 +32,7 @@ const ProductCarousel: React.FC<Props> = ({ images, style, activeVariant }) => {
     if (index !== -1) {
       slider.current?.moveToIdx(index);
     }
-  }, [activeVariant.id]);
+  }, [activeVariant.image_id]);
 
   const showLeftArrow = currentPosition > 0;
 
@@ -73,7 +73,8 @@ const ProductCarousel: React.FC<Props> = ({ images, style, activeVariant }) => {
               src={image.src}
               key={image.id}
               alt={image.alt}
-              className="keen-slider__slide w-full object-fill"
+              priority
+              className="keen-slider__slide w-full object-contain"
               width={800}
               height={800}
             />
@@ -81,7 +82,7 @@ const ProductCarousel: React.FC<Props> = ({ images, style, activeVariant }) => {
         </div>
       </div>
       {images.length > 1 ? 
-      <div className="flex flex-wrap gap-2 w-full mt-4 xl:px-8">
+      <div className="flex flex-wrap gap-2 w-full px-4 sm:px-0 mt-4 xl:px-8">
         {images?.map((image, index) => (
           <button
             onClick={() => slider.current?.moveToIdx(index)}
@@ -94,6 +95,7 @@ const ProductCarousel: React.FC<Props> = ({ images, style, activeVariant }) => {
               alt={image.alt}
               width={100}
               height={100}
+              priority
               className="object-contain h-[100px] hover:opacity-75 bg-white"
             />
           </button>

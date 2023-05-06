@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         "bangers": ["Bangers"],
       },
+      screens: {
+        "xs": "320px"
+      }
     },
   },
   plugins: [
