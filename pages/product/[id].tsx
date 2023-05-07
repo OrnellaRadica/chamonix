@@ -38,10 +38,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
+export type SelectedOptions = {
+  option1: string;
+  option2: string | null;
+  option3: string | null;
+}
 export default function ProductPage({
   product,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [selectedOptions, setSelectedOptions] = useState({
+  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({
     option1: product.options?.[0]?.values[0],
     option2: product.options?.[1]?.values[0] || null,
     option3: product.options?.[2]?.values[0] || null,

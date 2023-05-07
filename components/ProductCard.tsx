@@ -1,18 +1,13 @@
-import { Collection } from "@/types/collection";
-import { Product } from "@/types/product";
 import Image from "next/image";
 import Link from "next/link";
+import { getLowestVariantPrice } from "@/helpers";
+import { Collection } from "@/types/collection";
 
 interface Props {
   product: Collection["products"][number];
 }
+
 const ProductCard: React.FC<Props> = ({ product }) => {
-  const getLowestVariantPrice = (variants: Product["variants"]) => {
-    const lowToHigh = variants.sort(
-      (a, b) => parseFloat(a.price) - parseFloat(b.price)
-    );
-    return lowToHigh[0];
-  };
 
   return (
     <Link href={`/product/${product.id}`} className="group">

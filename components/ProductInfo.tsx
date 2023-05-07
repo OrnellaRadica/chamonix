@@ -1,19 +1,12 @@
+import { SelectedOptions } from "@/pages/product/[id]";
 import { ReducedProduct,Variant } from "@/types/product";
 import { Dispatch, SetStateAction } from "react";
 
 interface Props {
   product: ReducedProduct ;
   activeVariant: Variant;
-  selectedOptions: {
-    option1: string;
-    option2: string | null;
-    option3: string | null;
-};
-  setSelectedOptions:  Dispatch<SetStateAction<{
-    option1: string;
-    option2: string | null;
-    option3: string | null;
-}>> ;
+  selectedOptions: SelectedOptions;
+  setSelectedOptions:  Dispatch<SetStateAction<SelectedOptions>> ;
 }
 
 const ProductInfo: React.FC<Props> = ({product, activeVariant, selectedOptions, setSelectedOptions}) => {
