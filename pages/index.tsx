@@ -18,9 +18,9 @@ export default function Home() {
         <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">
           New arrivals are here
         </h1>
-        <h2 className="mt-4 text-xl text-white">
-          The new arrivals have, well, newly arrived. <br />
-          Check out the best options for the winter season.
+        <h2 className="mt-4 text-xl text-white max-w-[660px]">
+          Get ready for the ultimate snowboarding adventure with our high-quality snowboards and accessories.<br />
+          Take your snowboarding skills to the next level!
         </h2>
         <Link
           href="/collection"

@@ -58,7 +58,7 @@ export default function ProductPage({
         item.option1 === selectedOptions.option1 &&
         item.option2 === selectedOptions.option2 &&
         item.option3 === selectedOptions.option3
-    ) || product.variants[0]; // We shouldn't get here, but JIC this is a fallback to the first optino.
+    ) || product.variants[0]; // We shouldn't get here, but JIC this is a fallback to the first option.
   return (
     <>
       <Head>
@@ -83,14 +83,13 @@ export default function ProductPage({
             selectedOptions={selectedOptions}
             setSelectedOptions={setSelectedOptions}
           />
-          <form className="mt-12 px-4 sm:px-0">
+          <div className="mt-12 px-4 sm:px-0">
             <button
-              type="submit"
-              className="flex w-full max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+              className="flex w-full max-w-sm flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
             >
               Add to cart
             </button>
-          </form>
+          </div>
           </div>
         </div>
       </section>
