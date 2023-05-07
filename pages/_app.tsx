@@ -12,17 +12,17 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
     <Head>
+      <title>
+        Chamonix
+      </title>
       <meta
         name="description"
-        content="Proyecto Ornella Radica"
+        content="Code by Ornella Radica - software developer."
       />
-      <title>
-        Proyecto Ornella Radica
-      </title>
       <meta
         property="og:image"
         content=
-          '/images/logo.png'
+          '/images/logo-chamonix.png'
       />
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link 

@@ -4,6 +4,7 @@ import { ReducedProduct } from "@/types/product";
 import { Collection } from "@/types/collection";
 import { useState } from "react";
 import ProductInfo from "@/components/ProductInfo";
+import Head from "next/head";
 
 const serverRoute = process.env.SERVER_ROUTE;
 
@@ -55,6 +56,11 @@ export default function ProductPage({
     ) || product.variants[0]; // We shouldn't get here, but JIC this is a fallback to the first optino.
   return (
     <>
+      <Head>
+        <title>{product.title}</title>
+        <meta name="description" content={product.body_html || 'Designed for maximum performance, our board offers stability, speed, and maneuverability. Take your snowboarding skills to the next level!'} />
+        <meta property="og:image" content={product.images?.[0]?.src} />
+      </Head>
       <section className="mx-auto py-6 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8 min-h-[calc(100vh-73px)]">
         <div className="md:grid md:grid-cols-2 md:items-start md:gap-x-8">
           {product.images.length != 0 ? (
